@@ -26,7 +26,6 @@ public class LoginActivity extends AppCompatActivity {
         if (loginStatus) {
             LoginActivity.this.navigateToHomepage();
         }
-        
         Button signInBtn = findViewById(R.id.signInBtn);
         signInBtn.setOnClickListener(LoginActivity.this::onSignIn);
     }
@@ -45,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
             LoginActivity.this.navigateToHomepage();
         }
     }
-    public boolean checkLogin(String username, String password) {
+    private boolean checkLogin(String username, String password) {
         return username.equals("admin") && password.equals("123456");
     }
     private void navigateToHomepage() {
